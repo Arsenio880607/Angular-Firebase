@@ -1,0 +1,24 @@
+<div class="container">
+
+
+
+        
+    <h3>welcome: {{user}} </h3>
+    
+    <button type="submit" (click)=" onNewPost()" class="btn btn-primary btn-lg">+ New Post</button>
+    <ul class="list-group mt-3">
+            <li class="list-group-item "  *ngFor="let item of items | async">
+                <h6>Created By: {{item.User_Name}}</h6>
+                <h6>Title:{{item.post_name}} </h6>
+                <h6>Date: {{item.Date.toDate() | date: 'dd/MM/yyyy' }}</h6>
+                <h6>Conte:{{item.cont}} </h6>
+                
+                
+
+                
+            </li>
+           
+          </ul>
+        
+        
+</div>
